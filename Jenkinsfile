@@ -12,11 +12,7 @@ pipeline {
                 checkout scm
             }
         }
-    stage('Initialize'){
-          def dockerHome = tool 'myDocker'
-          env.PATH = "${dockerHome}/bin:${env.PATH}"
-       }
-        stage("Build image") {
+    stage("Build image") {
             steps {
                 script {
                     myapp = docker.build("prince1996/nodeapp:${env.BUILD_ID}")
