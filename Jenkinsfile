@@ -8,14 +8,7 @@ pipeline {
         CREDENTIALS_ID = 'node'
     }
     stages {
-         stage("Initialize"){
-             steps {
-                script {
-          env.PATH = "${dockerHome}/bin:${env.PATH}"
-                }
-             }
-       }
-        stage("Checkout code") {
+                stage("Checkout code") {
             steps {
                 checkout scm
             }
