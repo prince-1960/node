@@ -24,10 +24,10 @@ kind: Service
 metadata:
   name: nodeapp
 spec:
-ports:
-  - port: 5000
-    targetPort: 5000
-selector:
-  app: nodeapp
-  tier: nodeapp
-type: LoadBalancer
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: nodeapp
+    tier: nodeapp
+  type: LoadBalancer
