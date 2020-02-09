@@ -2,7 +2,7 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = ' node-267802'
+        PROJECT_ID = 'node-267802'
         CLUSTER_NAME = 'node-cluster-1'
         LOCATION = 'asia-northeast3-c'
         CREDENTIALS_ID = 'node'
