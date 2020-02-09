@@ -1,18 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: nodeapp
-labels:
-  app: nodeapp
+  name: nodeapp
 spec:
-strategy:
-  type: Recreate
-template:
-  metadata:
-    labels:
-      app: nodeapp
-      tier: nodeapp
-  spec:
     containers:
     - name: nodeapp
       image: prince1996/nodeapp:latest
