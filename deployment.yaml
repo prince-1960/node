@@ -1,15 +1,22 @@
-apiVersion: apps/v1
+apiVersion: nodejs/v1
 kind: Deployment
 metadata:
-  name: nodeapp
+  name: nodeapp  
 spec:
-    containers:
-    - name: nodeapp
-      image: prince1996/nodeapp:latest
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 5000
-        name: nodeapp
+  selector:
+    matchLabels:
+      app: nodeapp
+  template:
+    metadata:
+      labels:
+        app: nodeapp
+    spec:
+     containers:
+     - name: nodeapp
+       image: prince1996/nodeapp:latest
+       imagePullPolicy: Always
+       ports:
+       - containerPort: 5000
 
 ---
 apiVersion: v1
