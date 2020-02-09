@@ -1,4 +1,4 @@
-apiVersion: nodejs/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodeapp  
@@ -22,9 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-name: nodeapp
-labels:
-  app: nodeapp
+  name: nodeapp
 spec:
 ports:
   - port: 5000
