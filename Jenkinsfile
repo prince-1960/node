@@ -9,7 +9,11 @@ pipeline {
     }
     stages {
          stage("Initialize"){
+             steps {
+                script {
           env.PATH = "${dockerHome}/bin:${env.PATH}"
+                }
+             }
        }
         stage("Checkout code") {
             steps {
