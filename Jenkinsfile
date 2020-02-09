@@ -8,12 +8,12 @@ pipeline {
         CREDENTIALS_ID = 'node'
     }
     stages {
-                stage("Checkout code") {
+                stage("Pull Code") {
             steps {
                 checkout scm
             }
         }
-        stage('Initialize'){ 
+        stage('Initialize Docker'){ 
             steps {
                 script {
           def dockerHome = tool 'docker'
@@ -21,14 +21,14 @@ pipeline {
        }
             }
         }
-    stage("Build image") {
+    stage("Build") {
             steps {
                 script {
                     myapp = docker.build("prince1996/nodeapp:${env.BUILD_ID}")
                 }
             }
         }
-        stage("Push image") {
+        stage("Push to Docker") {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker') {
@@ -38,7 +38,7 @@ pipeline {
                 }
             }
         }        
-        stage('Deploy to GKE') {
+        stage('Deploy to Kubernetes') {
             steps{
                 sh "sed -i 's/nodeapp:latest/nodeapp:${env.BUILD_ID}/g' deployment.yaml"
                 step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
