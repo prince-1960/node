@@ -17,3 +17,16 @@ spec:
        imagePullPolicy: Always
        ports:
        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeapp
+spec:
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: nodeapp
+    tier: nodeapp
+  type: LoadBalancer
