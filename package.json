@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Node Js App",
+  "main": "me.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prince-1960/node.git"
+  },
+  "author": "Prince Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prince-1960/node/issues"
+  },
+  "homepage": "https://github.com/prince-1960/node#readme"
+}
