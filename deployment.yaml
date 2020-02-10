@@ -1,0 +1,38 @@
+apiVersion: nodejs/v1
+kind: Deployment
+metadata:
+name: nodeapp
+labels:
+  app: nodeapp
+spec:
+strategy:
+  type: Recreate
+template:
+  metadata:
+    labels:
+      app: nodeapp
+      tier: nodeapp
+  spec:
+    containers:
+    - name: nodeapp
+      image: prince1996/nodeapp:latest
+      imagePullPolicy: Always
+      ports:
+      - containerPort: 5000
+        name: nodeapp
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+name: nodeapp
+labels:
+  app: nodeapp
+spec:
+ports:
+  - port: 5000
+    targetPort: 5000
+selector:
+  app: nodeapp
+  tier: nodeapp
+type: LoadBalancer
