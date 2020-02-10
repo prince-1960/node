@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/prince-1960/node/issues"
   },
-  "homepage": "https://github.com/prince-1960/node#readme"
+  "homepage": "https://github.com/prince-1960/node#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.10"
+  }
 }
