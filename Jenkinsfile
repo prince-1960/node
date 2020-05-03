@@ -12,9 +12,8 @@ pipeline {
             steps {
                 checkout scm
             }
-        }
-        
-        }
+       }         
+    }    
     stage("Build") {
             steps {
                 script {
