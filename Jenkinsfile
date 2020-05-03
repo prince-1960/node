@@ -5,7 +5,7 @@ pipeline {
         PROJECT_ID = 'techjunkiesjenkins'
         CLUSTER_NAME = 'techjunkies '
         LOCATION = 'us-central1-c'
-        CREDENTIALS_ID = 'node'
+        CREDENTIALS_ID = 'gke'
     }
     stages {
                 stage("Pull Code") {
