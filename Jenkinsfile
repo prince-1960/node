@@ -13,13 +13,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Initialize Docker'){ 
-            steps {
-                script {
-          def dockerHome = tool 'docker'
-          env.PATH = "${dockerHome}/bin:${env.PATH}"
-       }
-            }
+        
         }
     stage("Build") {
             steps {
