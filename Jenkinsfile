@@ -2,8 +2,8 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'techjunkiesjenkins'
-        CLUSTER_NAME = 'techjunkies'
+        PROJECT_ID = 'kubernt-276113'
+        CLUSTER_NAME = 'cluster-1'
         LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'gke'
     }
