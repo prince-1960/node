@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         PROJECT_ID = 'techjunkiesjenkins'
-        CLUSTER_NAME = 'techjunkies '
+        CLUSTER_NAME = 'techjunkies'
         LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'gke'
     }
