@@ -2,10 +2,10 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'node-267802'
-        CLUSTER_NAME = 'node2'
-        LOCATION = 'us-west3-b'
-        CREDENTIALS_ID = 'node'
+        PROJECT_ID = 'newnode-281016'
+        CLUSTER_NAME = 'cluster-1'
+        LOCATION = 'us-central1-c'
+        CREDENTIALS_ID = 'node2'
     }
     stages {
                 stage("Pull Code") {
