@@ -6,7 +6,7 @@ const PORT = 4000;
 
 const app = express();
 app.get('/', function (req, res) {
-  res.send('Hello I'm a CI CD Pipeline');
+  res.send('Hello Im a CI CD Pipeline');
 });
 
 app.listen(PORT);
