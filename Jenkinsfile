@@ -2,9 +2,9 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'jenkinsbuild-286501'
-        CLUSTER_NAME = 'jenkinscluster'
-        LOCATION = 'asia-east1-b'
+        PROJECT_ID = 'sturdy-sentry-307318'
+        CLUSTER_NAME = 'cluster-1'
+        LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'node2'
     }
     stages {
